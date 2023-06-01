@@ -27,25 +27,25 @@ public class ExcelUtil {
 			{
 				ip = new FileInputStream(TEST_DATA_SHEET_PATH);
 			}
-			
+
 			else
 			{
-			switch(exceltestdata) {
-			case "qa":
-				ip = new FileInputStream("./src/test/resources/testdata/opencartqaapptestdata.xlsx");
-				System.out.println("$$$$$$$$$$$$$using QA data file $$$$$$$$$$$$$$");
-				break;
+				switch(exceltestdata) {
+				case "qa":
+					ip = new FileInputStream("./src/test/resources/testdata/opencartqaapptestdata.xlsx");
+					System.out.println("$$$$$$$$$$$$$using QA data file $$$$$$$$$$$$$$");
+					break;
 
-			case "stage":
-				System.out.println("$$$$$$$$$$$$$using STAGE data file $$$$$$$$$$$$$$");
-				ip = new FileInputStream("./src/test/resources/testdata/opencartstageapptestdata.xlsx");
-				break;
+				case "stage":
+					System.out.println("$$$$$$$$$$$$$using STAGE data file $$$$$$$$$$$$$$");
+					ip = new FileInputStream("./src/test/resources/testdata/opencartstageapptestdata.xlsx");
+					break;
 
-			default:
-				System.out.println("please pass the correct test data path");
-				break;
-			}
-			
+				default:
+					System.out.println("please pass the correct test data path");
+					break;
+				}
+
 			}
 
 			book=WorkbookFactory.create(ip);

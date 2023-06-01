@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite thread-count="1" parallel="tests" name="Failed suite [Open Cart Test Suite]" guice-stage="DEVELOPMENT" verbose="2">
+  <listeners>
+    <listener class-name="com.qa.opencart.listeners.AnnotationTransformer"/>
+    <listener class-name="com.qa.opencart.listeners.ExtentReportListener"/>
+    <listener class-name="com.qa.opencart.listeners.TestAllureListener"/>
+  </listeners>
+  <test thread-count="1" parallel="tests" name="Open Cart Login Page Test(failed)" verbose="2">
     <classes>
       <class name="com.qa.opencart.tests.LoginPageTest">
         <methods>
@@ -11,5 +16,5 @@
         </methods>
       </class> <!-- com.qa.opencart.tests.LoginPageTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Open Cart Login Page Test(failed) -->
+</suite> <!-- Failed suite [Open Cart Test Suite] -->

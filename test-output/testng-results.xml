@@ -1,85 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="5" passed="3" failed="1" skipped="0">
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-05-13T09:27:28Z" name="Default suite" finished-at="2023-05-13T09:28:11Z" duration-ms="42918">
+  <suite started-at="2023-06-01T09:37:01Z" name="Default suite" finished-at="2023-06-01T09:38:03Z" duration-ms="62171">
     <groups>
     </groups>
-    <test started-at="2023-05-13T09:27:28Z" name="Default test" finished-at="2023-05-13T09:28:11Z" duration-ms="42918">
-      <class name="com.qa.opencart.tests.LoginPageTest">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@455c1d8c]" started-at="2023-05-13T09:27:29Z" name="setUp" finished-at="2023-05-13T09:28:04Z" duration-ms="35738" status="PASS">
+    <test started-at="2023-06-01T09:37:01Z" name="Default test" finished-at="2023-06-01T09:38:03Z" duration-ms="62171">
+      <class name="com.qa.opencart.tests.AccountsPageTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:01Z" name="setUp" finished-at="2023-06-01T09:37:47Z" duration-ms="45872" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="loginPageTitleTest()[pri:1, instance:com.qa.opencart.tests.LoginPageTest@455c1d8c]" started-at="2023-05-13T09:28:04Z" name="loginPageTitleTest" finished-at="2023-05-13T09:28:10Z" duration-ms="5335" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for title to be "Account Logina". Current title: "Account Login" (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'INAIRLT541343', ip: '192.168.1.19', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\P71116~1.INA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55882}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55882/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 351ebd266e0af6498a44dbf6056dbef9]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for title to be "Account Logina". Current title: "Account Login" (tried for 5 second(s) with 500 milliseconds interval)
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'INAIRLT541343', ip: '192.168.1.19', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 113.0.5672.93, chrome: {chromedriverVersion: 113.0.5672.63 (0e1a4471d5ae..., userDataDir: C:\Users\P71116~1.INA\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55882}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:55882/devtoo..., se:cdpVersion: 113.0.5672.93, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 351ebd266e0af6498a44dbf6056dbef9
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:87)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:231)
-at com.qa.opencart.utils.ElementUtil.waitForTitleToBe(ElementUtil.java:368)
-at com.qa.opencart.utils.ElementUtil.doGetTitle(ElementUtil.java:355)
-at com.qa.opencart.pages.LoginPage.getLoginPageTitle(LoginPage.java:35)
-at com.qa.opencart.tests.LoginPageTest.loginPageTitleTest(LoginPageTest.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
-at org.testng.internal.Invoker.invokeMethod(Invoker.java:583)
-at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:719)
-at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:989)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+        <test-method is-config="true" signature="accPageSetup()[pri:0, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:47Z" name="accPageSetup" finished-at="2023-06-01T09:37:49Z" duration-ms="1680" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageTitleTest -->
-        <test-method signature="loginPageUrlTest()[pri:2, instance:com.qa.opencart.tests.LoginPageTest@455c1d8c]" started-at="2023-05-13T09:28:10Z" name="loginPageUrlTest" finished-at="2023-05-13T09:28:10Z" duration-ms="21" status="PASS">
+        </test-method> <!-- accPageSetup -->
+        <test-method signature="accPageTitleTest()[pri:1, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:49Z" name="accPageTitleTest" finished-at="2023-06-01T09:37:49Z" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginPageUrlTest -->
-        <test-method signature="forgotPasswordLinkTest()[pri:3, instance:com.qa.opencart.tests.LoginPageTest@455c1d8c]" started-at="2023-05-13T09:28:10Z" name="forgotPasswordLinkTest" finished-at="2023-05-13T09:28:10Z" duration-ms="122" status="PASS">
+        </test-method> <!-- accPageTitleTest -->
+        <test-method signature="accPageHeaderTest()[pri:2, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:50Z" name="accPageHeaderTest" finished-at="2023-06-01T09:37:50Z" duration-ms="127" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- forgotPasswordLinkTest -->
-        <test-method signature="doLoginTest()[pri:5, instance:com.qa.opencart.tests.LoginPageTest@455c1d8c]" started-at="2023-05-13T09:28:10Z" name="doLoginTest" finished-at="2023-05-13T09:28:11Z" duration-ms="974" status="PASS">
+        </test-method> <!-- accPageHeaderTest -->
+        <test-method signature="isLogoutLinkExist()[pri:3, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:50Z" name="isLogoutLinkExist" finished-at="2023-06-01T09:37:50Z" duration-ms="136" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- doLoginTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.LoginPageTest@455c1d8c]" started-at="2023-05-13T09:28:11Z" name="tearDown" finished-at="2023-05-13T09:28:11Z" duration-ms="2" status="PASS">
+        </test-method> <!-- isLogoutLinkExist -->
+        <test-method signature="accountPageSectionsTest()[pri:4, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:50Z" name="accountPageSectionsTest" finished-at="2023-06-01T09:37:50Z" duration-ms="270" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- accountPageSectionsTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:5, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:52Z" name="searchTest" data-provider="getProductData" finished-at="2023-06-01T09:37:53Z" duration-ms="1368" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MacBook]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:5, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:53Z" name="searchTest" data-provider="getProductData" finished-at="2023-06-01T09:37:54Z" duration-ms="1139" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Apple]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="searchTest(java.lang.String)[pri:5, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:54Z" name="searchTest" data-provider="getProductData" finished-at="2023-06-01T09:37:56Z" duration-ms="1355" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SamSung]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchTest -->
+        <test-method signature="selectProductTest(java.lang.String, java.lang.String)[pri:6, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:56Z" name="selectProductTest" data-provider="getMainProductData" finished-at="2023-06-01T09:37:59Z" duration-ms="3558" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MacBook]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[MacBook Pro]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProductTest -->
+        <test-method signature="selectProductTest(java.lang.String, java.lang.String)[pri:6, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:37:59Z" name="selectProductTest" data-provider="getMainProductData" finished-at="2023-06-01T09:38:02Z" duration-ms="2278" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Apple]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Apple Cinema 30"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProductTest -->
+        <test-method signature="selectProductTest(java.lang.String, java.lang.String)[pri:6, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:38:02Z" name="selectProductTest" data-provider="getMainProductData" finished-at="2023-06-01T09:38:03Z" duration-ms="1845" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SamSung]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Samsung SyncMaster 941BW]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectProductTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.qa.opencart.tests.AccountsPageTest@4defd42]" started-at="2023-06-01T09:38:03Z" name="tearDown" finished-at="2023-06-01T09:38:03Z" duration-ms="6" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.qa.opencart.tests.LoginPageTest -->
+      </class> <!-- com.qa.opencart.tests.AccountsPageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

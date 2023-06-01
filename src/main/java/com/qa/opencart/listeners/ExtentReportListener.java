@@ -26,7 +26,7 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 	private static ExtentReports extent = init();
 	public static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 	private static ExtentReports extentReports;
-	
+
 
 	private static ExtentReports init() {
 
@@ -40,7 +40,7 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 				e.printStackTrace();
 			}
 		}
-		
+
 		extentReports = new ExtentReports();
 		ExtentSparkReporter reporter = new ExtentSparkReporter(OUTPUT_FOLDER + FILE_NAME);
 		reporter.config().setReportName("Open Cart Automation Test Results");
@@ -60,7 +60,7 @@ public class ExtentReportListener extends DriverFactory implements ITestListener
 	@Override
 	public synchronized void onStart(ITestContext context) {
 		System.out.println("Test Suite started!");
-		
+
 	}
 
 	@Override

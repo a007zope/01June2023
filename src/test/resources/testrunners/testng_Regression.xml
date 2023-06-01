@@ -11,19 +11,19 @@
 			class-name="com.qa.opencart.listeners.TestAllureListener"/>
 	</listeners>
 	  
-	    <test name="Open Cart Login Page Test">	  	  	  
+	<!--    <test name="Open Cart Login Page Test">	  	  	  
     <classes>
       <class name="com.qa.opencart.tests.LoginPageTest"/>
     </classes>    	  
-	  </test>
+	  </test>-->
 	  
-	<!--
+	
 	    <test name="Open Cart Accounts Page Test">	  	  	  
     <classes>
       <class name="com.qa.opencart.tests.AccountsPageTest"/>
     </classes>    	  
 	  </test>  
-	  -->
+	  
 	 <!--    <test name="Open Cart Registration Page Test">	  	  	  
     <classes>
       <class name="com.qa.opencart.tests.RegistrationPageTest"/>

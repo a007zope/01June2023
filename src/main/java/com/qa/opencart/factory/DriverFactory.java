@@ -63,8 +63,6 @@ public class DriverFactory {
 		getDriver().manage().window().fullscreen();
 		getDriver().manage().deleteAllCookies();
 		getDriver().get(prop.getProperty("url"));
-
-
 		return getDriver();
 
 	}
@@ -81,8 +79,8 @@ public class DriverFactory {
 	 * This method is use to initialize the Properties
 	 * @return will return properties prop reference
 	 */
-	
-	
+
+
 	/*
     ./ means from  current project directory you traverse
        new FileInputStream("./src/test/resources/config/config.properties");
@@ -91,84 +89,84 @@ public class DriverFactory {
 		prop = new Properties();
 
 		FileInputStream fis = null;
-		
-		
+
+
 		String envName = System.getProperty("env"); //qa/dev/stage/uat
-		
-		
+
+
 		if(envName == null)
 		{
 			System.out.println("running on prod envName");
 			try 
 			{
-				
-			fis = new FileInputStream("./src/test/resources/config/config.properties");
-		
-		}
+
+				fis = new FileInputStream("./src/test/resources/config/config.properties");
+
+			}
 			catch(FileNotFoundException e)
 			{
 				e.printStackTrace();
 			}
-			
+
 		}	
 		else
 		{
 			System.out.println("running on envName"+ envName);
 			try {
-			switch(envName.toLowerCase())
-			{
-			
-			case "qa":
-				fis = new FileInputStream("./src/test/resources/config/qa.config.properties");
-				break;
-				
-			case "stage":
-			fis = new FileInputStream("./src/test/resources/config/stage.config.properties");
-			break;
-			
-			default:
-				System.out.println("Please pass the right environment");
-				break;
-				
-		}
+				switch(envName.toLowerCase())
+				{
+
+				case "qa":
+					fis = new FileInputStream("./src/test/resources/config/qa.config.properties");
+					break;
+
+				case "stage":
+					fis = new FileInputStream("./src/test/resources/config/stage.config.properties");
+					break;
+
+				default:
+					System.out.println("Please pass the right environment");
+					break;
+
+				}
 			}
-			
+
 			catch(FileNotFoundException e )
 			{
 				e.printStackTrace();
 			}
-			
-		
+
+
 		}
-		
+
 		try
 		{
 			prop.load(fis);
 		}
 		catch(IOException e)
 		{
-			
+
 			e.printStackTrace();
 		}
-				
+
 		return prop;
 
 	}
-	
+
 	/**
 	 * the below method takes the screenshot
 	 * 
 	 * user.dir means current project directory in our case it will April042023POMSeries
 	 */
-	
+
 	public static String getScreenshot()
 	{
 		File srcFile =((TakesScreenshot)getDriver()).getScreenshotAs(OutputType.FILE);
-		
+
 		String path = System.getProperty("user.dir") + "/screenshots/"+System.currentTimeMillis()+".png";
-		
+
 		File destination = new File(path);
-		
+
 		try {
 			FileUtils.copyFile(srcFile, destination);
 		} catch (IOException e) {
@@ -176,29 +174,26 @@ public class DriverFactory {
 			e.printStackTrace();
 		}
 		return path;
-		
-		
-		
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

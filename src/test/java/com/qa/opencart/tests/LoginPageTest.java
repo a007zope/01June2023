@@ -1,6 +1,8 @@
 package com.qa.opencart.tests;
 
 import com.qa.opencart.listeners.TestAllureListener;
+import com.qa.opencart.listeners.ExtentReportListener;
+import com.qa.opencart.listeners.AnnotationTransformer;
 import com.qa.opencart.utils.Constants;
 import com.qa.opencart.utils.Errors;
 
@@ -16,7 +18,7 @@ import org.testng.annotations.Test;
 
 @Epic(" Epic no 10020 sample :Design Open Cart App- Login Page")
 @Story("US 101 :Open Cart Login Design with multiple features")
-@Listeners(TestAllureListener.class)
+@Listeners({AnnotationTransformer.class,ExtentReportListener.class,TestAllureListener.class})
 public class LoginPageTest extends BaseTest {
 
 	@Description("Login Page Title Test")
